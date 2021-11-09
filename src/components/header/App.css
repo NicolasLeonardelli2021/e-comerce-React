@@ -1,6 +1,7 @@
 .barraSuperior{
   background-color: black;
   height: 40px;
+ 
   text-align: right;
  
 }
@@ -12,6 +13,14 @@
 top: 20px;
   text-decoration: none;
 }
-.barraLogo{
+.carrito{
+  justify-content: center;
+}
+
+.barraInferior{
   height: 80px;
+}
+
+.container{
+  max-width: 100%;
 }
