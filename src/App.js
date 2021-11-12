@@ -4,6 +4,7 @@ import { Navbar } from './components/navBar/NavBar';
 import {Header} from './components/header/header';
 import {Clicker} from './components/Clicker/Clicker';
 import { ItemListContainer } from './components/itemListContainer/ItemListContainer';
+import { ItemCount } from './components/itemCount/ItemCount';
 
 function App() {
 
@@ -18,7 +19,7 @@ function App() {
       <Navbar/>
     </Router>
     <ItemListContainer greeting=" Mundo Informatico"/>
-    <Clicker/>
+    <ItemCount/>
     </>
   );
 }
