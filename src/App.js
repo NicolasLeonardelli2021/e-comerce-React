@@ -18,8 +18,8 @@ function App() {
     <Router>
       <Navbar/>
     </Router>
-    <ItemListContainer greeting=" Mundo Informatico"/>
-    <ItemCount/>
+    <ItemListContainer/>
+    
     </>
   );
 }
