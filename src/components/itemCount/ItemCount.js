@@ -1,5 +1,6 @@
 
 import React,{useState} from "react"
+import './itemCount.css'
 import { Card,Button, Container, Col,Row } from "react-bootstrap"
 
 
@@ -23,8 +24,8 @@ const restarClick = () =>{
 
 return (
 <>
-
-    <Container>
+    <h4>Cantidad</h4>
+    <Container className="count">
         <Row>
             <Col>
                 <Button variant="primary" onClick={restarClick}>-</Button>

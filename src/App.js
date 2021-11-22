@@ -1,24 +1,35 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {BrowserRouter as Router,Switch,Route} from 'react-router-dom';
+import {BrowserRouter,Routes,Route} from 'react-router-dom';
 import { Navbar } from './components/navBar/NavBar';
 import {Header} from './components/header/header';
-import {Clicker} from './components/Clicker/Clicker';
+
 import { ItemListContainer } from './components/itemListContainer/ItemListContainer';
-import { ItemCount } from './components/itemCount/ItemCount';
+import {ItemDetailContainer} from './components/ItemDetailContainer/ItemDetailContainer'
 
 function App() {
 
   
   return (
     <>                      
-     
+     <BrowserRouter>
+     <Header />
+     <Navbar/>
+   
+    <Routes>
+      <Route path="/" element={ <ItemListContainer/>}/>
+      <Route path="/detail/:itemId" element={<ItemDetailContainer/>}/>
 
-    <Header />
+      
+      
+    </Routes>
+  
+     
+     </BrowserRouter>
+
     
-    <Router>
-      <Navbar/>
-    </Router>
-    <ItemListContainer/>
+    
+   
+    
     
     </>
   );

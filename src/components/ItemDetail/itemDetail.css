@@ -1,0 +1,18 @@
+.containerDetail{
+    width: 90%;
+    background-color: white;
+}
+
+.detail{
+    border: solid 1px;
+    border-color: rgb(211, 211, 211);
+    
+}
+
+.precio{
+    font-size: 40px;
+}
+
+.botonDetalle{
+    width: 100%;
+}
