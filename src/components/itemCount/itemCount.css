@@ -1,9 +1,19 @@
 .count{
-    width: 50%;
+    width: 100%;
     border: solid 1px;
     border-color: rgb(211, 211, 211);
+    align-items: center;
+    justify-content: center;
 }
 
+.filaCount{
+    align-items: center;
+    justify-content: center;
+}
+
+.colCount{
+    text-align: center;
+}
 h4{
     text-align: center;
 }

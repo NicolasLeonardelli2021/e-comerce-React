@@ -1,8 +1,10 @@
 import React from 'react';
 import './App.css';
 import { CartWidget } from '../cardWidget/CartWidget';
-import { Container,Row,Col } from 'react-bootstrap';
+import { Container,Row,Col,Form,FormControl, Button } from 'react-bootstrap';
 import Logo from './Logo.png';
+import { Link } from 'react-router-dom';
+
 
 export const Header = () => {
   
@@ -16,11 +18,22 @@ return (
   </Row>
   <Row className="barraInferior"> 
     <Col>
-        <img src={Logo}/>
+        <Link to="/" className="logo"><img src={Logo}/></Link>
     </Col>
-    <Col></Col>
+    <Col sm={4}></Col>
+    <Col sm={4}>
+    <Form className="d-flex">
+        <FormControl
+          type="search"
+          placeholder="Buscar"
+          className="me-2"
+          aria-label="Search"
+        />
+        <Button variant="outline-success">Buscar</Button>
+      </Form> 
+    </Col>
     <Col>
-        <CartWidget className="carrito"/>
+        <Link to="cart"><CartWidget className="carrito"/> </Link>
     </Col>
   </Row>
     </Container>

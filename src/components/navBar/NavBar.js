@@ -11,37 +11,37 @@ export const Navbar = () =>{
     <div className="collapse navbar-collapse" id="navbarNavDropdown">
       <ul className="navbar-nav mx-auto ">
         <li className="nav-item">
-        <Link className="nav-link active text-white" aria-current="page" to="#">Audio y Video</Link>
+        <Link className="nav-link active text-white" aria-current="page" to="/productos/audioVideo">Audio y Video</Link>
         </li>
         <li className="nav-item">
-        <Link className="nav-link text-white" to="#">Gaming</Link>
+        <Link className="nav-link text-white" to="/productos/gaming">Gaming</Link>
         </li>
         <li className="nav-item">
-        <Link className="nav-link text-white" to="#">Celular y Tablet</Link>
+        <Link className="nav-link text-white" to="/productos/celularTablet">Celular y Tablet</Link>
         </li>
         <li className="nav-item">
-          <Link className="nav-link  text-white" to="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          <Link className="nav-link  text-white" to="/productos/computacion" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
            Computacion
           </Link>
         </li>
         <li className="nav-item ">
-         <Link className="nav-link  text-white"to="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+         <Link className="nav-link  text-white"to="/productos/hogarOficina" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
            Hogar y Oficina
            </Link>
         </li>
         <li className="nav-item ">
-        <Link className="nav-link d text-white"to="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <Link className="nav-link d text-white"to="/productos/herramientas" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
            Herramientas
            </Link>
         </li>
         <li className="nav-item ">
-        <Link className="nav-link  text-white" to="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <Link className="nav-link  text-white" to="/productos/redCables" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
            Red y Cables
            </Link>
 
         </li>
         <li className="nav-item">
-        <Link className="nav-link d text-white" to="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <Link className="nav-link d text-white" to="/productos/vehiculos" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
            Vehiculos
            </Link>
         </li>
