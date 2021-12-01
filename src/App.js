@@ -6,14 +6,18 @@ import { ItemListContainer } from './components/itemListContainer/ItemListContai
 import {ItemDetailContainer} from './components/ItemDetailContainer/ItemDetailContainer'
 import { CartView } from './components/CartView/CartView';
 import {Navigate} from 'react-router-dom'
+import { CartProvider } from './components/context/CartContext';
 
 
 
 function App() {
 
-  
+ 
   return (
-    <>                      
+    <> 
+
+    
+        <CartProvider>  
      <BrowserRouter>
      <Header />
      <Navbar/>
@@ -30,8 +34,9 @@ function App() {
   
      
      </BrowserRouter>    
-    
+     </CartProvider>    
     </>
+    
   );
 }
 

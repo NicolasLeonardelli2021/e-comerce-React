@@ -1,14 +1,17 @@
-import React, { useState } from 'react'
+import React, { useState, useContext } from 'react'
 import './itemDetail.css'
 import {Col, Container, Row,Button} from 'react-bootstrap'
 import {ItemCount} from '../itemCount/ItemCount'
 import {useNavigate, Link} from 'react-router-dom'
+import { CartContext } from '../context/CartContext'
 
 export const ItemDetail = ({id,name,img,descripcion,price,category,Stock}) => {
 
     const navigate = useNavigate()
     const [cantidad, setCantidad] = useState(1)    // HOOK: controla el estado del componente
-    const[agregado, setAgregado] = useState(false)
+    
+
+    const {agregarAlCarrito, existProducto} = useContext(CartContext)
 
     const volverInicio = () =>{
         navigate('/')
@@ -17,15 +20,17 @@ export const ItemDetail = ({id,name,img,descripcion,price,category,Stock}) => {
     const volver = () =>{
         navigate(-1)
     }
-    console.log(agregado)
+    
+    
     const agregar = () => {
-        console.log('Item agregado', {
+        agregarAlCarrito({
             cantidad,
             id,
             name,
             price,
+            img
         })
-        setAgregado(true)
+       
     }
     return (
         <>
@@ -54,16 +59,17 @@ export const ItemDetail = ({id,name,img,descripcion,price,category,Stock}) => {
                     <br/>
 
                     {
-                        !agregado
+                        !existProducto(id)
                         ? <ItemCount 
                         max={Stock}
                          cantidad={cantidad} 
                          setCantidad={setCantidad} 
                          add={agregar}/>
                         : <><Link to="/cart" className="btn btn-primary botonDetalle" size="lg"> Terminar mi compra</Link>
-                        <br/>
-                        <Link to="" className="btn btn-warning botonDetalle" size="lg"> Seguir comprando</Link></>
 
+                        <br/>
+                        <Link to="" className="btn btn-warning botonDetalle" size="lg"> Seguir comprando</Link>
+                        </>
 
                     }
                     <br/>
