@@ -3,7 +3,7 @@ import './itemDetailContainer.css'
 import { useParams } from 'react-router'
 import { pedirDatos } from '../../datos/pedirDatos'
 import { ItemDetail } from '../ItemDetail/ItemDetail'
-
+import {Loader} from '../Loader/Loader'
 export const ItemDetailContainer = () => {
     
     const [item, setItem] = useState()
@@ -18,13 +18,13 @@ export const ItemDetailContainer = () => {
             setItem(resp.find(prod => prod.id === Number(itemId)))
         })
         .finally(()=>{
-            setLoading(false)
+            setLoading()
         })
     }, [])
         return (
             <div className="containerProductos">
                 { loading ?
-                 <h2>Cargando...</h2> : <ItemDetail {...item}/>}
+                 <Loader/> : <ItemDetail {...item}/>}
             </div>
         )
     }

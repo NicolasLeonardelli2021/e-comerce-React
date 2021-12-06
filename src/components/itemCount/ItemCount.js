@@ -28,13 +28,13 @@ return (
     <Container className="count">
         <Row className="filaCount">
             <Col>
-                <Button variant="primary" onClick={restarCantidad}>-</Button>
+                <Button variant={cantidad > 1 ? "primary" : "danger"} onClick={restarCantidad}>-</Button>
             </Col>
             <Col sm={8} className="colCount">
                 <span>{cantidad} </span>
             </Col>
             <Col>
-                <Button variant="primary" onClick={sumarCantidad}>+</Button>
+                <Button variant={cantidad < max ? "primary" : "danger"} onClick={sumarCantidad}>+</Button>
             </Col>
         </Row>
         <br/>
