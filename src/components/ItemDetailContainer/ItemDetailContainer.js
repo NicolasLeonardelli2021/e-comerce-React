@@ -4,6 +4,9 @@ import { useParams } from 'react-router'
 import { pedirDatos } from '../../datos/pedirDatos'
 import { ItemDetail } from '../ItemDetail/ItemDetail'
 import {Loader} from '../Loader/Loader'
+import { doc, getDoc, collection } from 'firebase/firestore/lite'
+import { db } from '../firebase/config'
+
 export const ItemDetailContainer = () => {
     
     const [item, setItem] = useState()
@@ -13,14 +16,24 @@ export const ItemDetailContainer = () => {
 
     useEffect(() => {
        setLoading(true)
-       pedirDatos()
-        .then(resp =>{
-            setItem(resp.find(prod => prod.id === Number(itemId)))
-        })
-        .finally(()=>{
-            setLoading()
-        })
+
+       const productosRef = collection(db, 'productos')
+       const docRef = doc(productosRef, itemId)
+        
+       getDoc(docRef)
+       .then((doc) =>{
+           setItem({
+               id: doc.id,
+               ...doc.data()
+           })
+       }
+       )
+       .finally(()=>{
+           setLoading(false)
+       })
     }, [])
+
+
         return (
             <div className="containerProductos">
                 { loading ?
