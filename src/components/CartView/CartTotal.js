@@ -1,6 +1,7 @@
 import React, { useContext } from 'react'
 import { CartContext } from '../context/CartContext'
 import {Container, Row, Col} from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 export const CartTotal = () => {
 
@@ -20,7 +21,7 @@ export const CartTotal = () => {
                     <br/>
                         <h3>$ {totalCompra()}</h3>
                         <br/>
-                        <button className="btn btn-success">Terminar mi compra</button>
+                        <Link to="/checkout" className="btn btn-success">Terminar mi compra</Link>
                     </Col>
                 </Row>
                 
