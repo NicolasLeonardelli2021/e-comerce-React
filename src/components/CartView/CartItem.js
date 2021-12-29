@@ -10,8 +10,6 @@ export const CartItem = ({name,price,id,cantidad,img}) => {
    
     const {carrito, removerCarrito } = useContext(CartContext)
 
-   
-
     return (
         <>
                <Container>
@@ -28,22 +26,17 @@ export const CartItem = ({name,price,id,cantidad,img}) => {
                        <Link  to={`/detail/${id}`} className="linkE" onClick={()=>{removerCarrito(id)}}>Modificar</Link>
                        </Col>
                        <Col sm={3}>
-                           <p>Sub Total </p>
+                        <p>Sub Total </p>
                        <h3> ${cantidadCart*price}</h3>
                        </Col>
                    </Row>
                    <Row> 
                        <Col>
-                       <Link  to="" className="linkE" onClick={()=>{removerCarrito(id)}}>Eliminar</Link>
-                    
-
+                       <Link  to="" className="linkE" onClick={()=>{removerCarrito(id)}}>Eliminar</Link>      
                        </Col>
                    </Row>
                </Container>
-                <hr/>
-                
-                
-                        
+                <hr/>          
         </>
     )
 }

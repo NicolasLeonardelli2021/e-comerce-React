@@ -7,12 +7,10 @@ export const CartWidget = () => {
 
 const {totalCantidad} = useContext(CartContext)
 
-
     return(
         <div>
         <BsFillCartCheckFill className="cardWidget"/>
         <span>{totalCantidad()}</span>
-        
         </div>
     )
 }
