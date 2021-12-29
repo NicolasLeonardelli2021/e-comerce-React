@@ -60,17 +60,19 @@ export const ItemDetail = ({id,name,img,descripcion,price,category,Stock}) => {
 
                     {
                         !existProducto(id)
-                        ? <ItemCount 
+                        ? <><ItemCount 
                         max={Stock}
                          cantidad={cantidad} 
                          setCantidad={setCantidad} 
                          add={agregar}/>
+                         <Button className="botonDetalle" variant="primary" size="lg" onClick={agregar}> Agregar al carrito</Button>
+                         </>
                         : <><Link to="/cart" className="btn btn-primary botonDetalle" size="lg"> Terminar mi compra</Link>
 
                         <br/>
-                        <Link to="" className="btn btn-warning botonDetalle" size="lg"> Seguir comprando</Link>
+                        <Link to="/" className="btn btn-warning botonDetalle" size="lg"> Seguir comprando</Link>
                         </>
-
+ 
                     }
                     <br/>
                     <br/>

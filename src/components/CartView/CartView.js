@@ -3,11 +3,14 @@ import { CartContext } from '../context/CartContext'
 import {Link} from 'react-router-dom'
 import { CartItem } from './CartItem'
 import {CartTotal} from './CartTotal'
+import { Container} from "react-bootstrap"
+import "./Cart.css"
 
 export const CartView = () => {
 
     const {carrito,vaciarCarrito,removerCarrito} = useContext(CartContext)
     return (
+        
         <>
            <hr/>
             {
@@ -40,6 +43,7 @@ export const CartView = () => {
             
 
             </>
+            
         
     )
 }

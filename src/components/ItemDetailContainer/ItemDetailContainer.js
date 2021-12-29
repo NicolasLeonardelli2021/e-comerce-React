@@ -1,7 +1,6 @@
 import React, { useState,useEffect } from 'react'
 import './itemDetailContainer.css'
 import { useParams } from 'react-router'
-import { pedirDatos } from '../../datos/pedirDatos'
 import { ItemDetail } from '../ItemDetail/ItemDetail'
 import {Loader} from '../Loader/Loader'
 import { doc, getDoc, collection } from 'firebase/firestore/lite'

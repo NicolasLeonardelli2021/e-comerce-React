@@ -8,7 +8,7 @@ export const CartTotal = () => {
     const {totalCompra } = useContext(CartContext)
 
     return (
-        <>
+        <>  
             <Container>
                 <Row>
                     <Col sm={6}>

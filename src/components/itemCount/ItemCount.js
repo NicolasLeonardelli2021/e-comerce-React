@@ -1,16 +1,20 @@
 
-
+import React, { useState, useContext } from 'react'
 import './itemCount.css'
 import { Card,Button, Container, Col,Row } from "react-bootstrap"
+import { CartContext } from '../context/CartContext'
 
 
 
-export const ItemCount = ({max, cantidad, setCantidad,add}) => {
+export const ItemCount = ({max, cantidad, setCantidad,id, name, price, img}) => {
+
+    const {carrito, agregarAlCarrito, removerCarrito} = useContext(CartContext)
+
 
 const sumarCantidad = () =>{
     
      cantidad < max && setCantidad(cantidad+ 1)
-    
+  
 }
 console.log(max)
 
@@ -19,7 +23,6 @@ const restarCantidad = () =>{
     cantidad > 1 && setCantidad(cantidad-1)
     
 }
-
 
 
 return (
@@ -37,8 +40,8 @@ return (
                 <Button variant={cantidad < max ? "primary" : "danger"} onClick={sumarCantidad}>+</Button>
             </Col>
         </Row>
-        <br/>
-        <Button className="botonDetalle" variant="primary" size="lg" onClick={add}> Agregar al carrito</Button>
+        <p>{max} disponibles</p>
+        
 
         </Container>
 

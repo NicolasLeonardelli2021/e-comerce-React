@@ -26,3 +26,12 @@ top: 20px;
   max-width: 100%;
 }
 
+.logos{
+  max-height: 50px;
+  margin-left: 10px;
+}
+
+.amd{
+  max-height: 30px;
+  margin-left: 10px;
+}
